@@ -3,6 +3,7 @@
     <pv-card class="product-card" v-for="producto in productos" :key="producto.id" style="width: 20em;">
       <!-- Contenido de cada tarjeta de producto -->
       <template #header>
+        
         <img :src="producto.imagen" alt=""><!-- Contenido del encabezado -->
       </template>
       <template #title>
@@ -10,12 +11,13 @@
       </template>
       <template #content>
         <!-- Mostrar otros detalles del producto -->
+        
         <p>{{ producto.descripcion }}</p>
         <p>Precio: ${{ producto.precio }}</p>
       </template>
       <template #footer>
         <!-- Contenido del pie de la tarjeta -->
-        <router-link :to="{ name: 'ProducDetail', params: { id: producto.id, productos: productos } }">
+        <router-link :to="{ name: 'ProducDetail', params: { id: producto.id} }">
           <button class="btn btn-primary">Detalle</button>
         </router-link>
       </template>
@@ -35,19 +37,20 @@ export default {
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .product-card {
-  flex: 0 0 calc(25% - 16px);
-  margin-bottom: 16px;
-  margin-right: 16px;
+  flex: 0 0 calc(20% - 20px); /* Cambiar el ancho de la tarjeta y considerar el margen */
   box-sizing: border-box;
   position: relative;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
+  max-width: 2000px; /* Limitar el ancho máximo */
+  margin: 20px 20px 20px 0;
 }
 
 .product-card:hover {
@@ -57,6 +60,7 @@ export default {
 .product-card img {
   max-width: 100%;
   height: auto;
+  max-height: 290px;
 }
 
 .product-card .btn {

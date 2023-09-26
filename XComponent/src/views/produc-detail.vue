@@ -1,44 +1,59 @@
-
+<template>
+  <div class="produc-detail">
+    <h1>{{ product.nombre }}</h1>
+    <img :src="product.imagen" alt="">
+    <p>{{ product.descripcion }}</p>
+    <p>Precio: ${{ product.precio }}</p>
+    <!-- Otros detalles del producto aquí -->
+    <router-link :to="{ name: 'home' }">
+      <button class="btn btn-primary">Volver</button>
+    </router-link>
+    <button @click="agregarProducto(product)">Agregar</button>
+  </div>
+</template>
 
 <script>
-  import { ref,reactive } from "vue";
-  import { db } from "../Data/productos";
-  const state = reactive( {productos: db})
-  
+import { mapState, mapActions, useStore } from 'vuex';
 
+///////
+
+///////
 
 export default {
-  props: ['id' ], // Asegúrate de incluir 'productos' como prop
-  computed: {
-    product() {
-      // Accede directamente a state.productos
-      const productos = state.productos;
+  props: ['id','product'],
+ setup(){
+        const store = useStore()
+       const agregarProducto = (product) => {
+        store.dispatch('agregarAlCarrito', product)
+      
+        console.log("Agregando producto");
+        console.log(product);
+        console.log('producto agregado')
+       }
+       return {agregarProducto}
+        
+       
+        
+        
 
-      // Asegúrate de que productos y el id sean válidos
+    },
+
+  computed: {
+    ...mapState(['productos']),
+    product() {
+      const productos = this.productos;
+      console.log(productos);
       if (!productos || !this.id) {
         console.log("No hay productos o id.");
         console.log(this.id);
         console.log(productos);
         return null;
       }
-
-      // Busca el producto correspondiente en la lista de productos
       const product = productos.find(producto => producto.id === Number(this.id));
-
-      return product || null; // Devuelve el producto o null si no se encuentra
+      return product || null;
     }
-  }
+  },
+ 
+ 
 }
 </script>
-  
-  <template>
-    <div class="produc-detail">
-        
-      <h1>{{ product.nombre }}</h1>
-      <img :src="product.imagen" alt="">
-      <p>{{ product.descripcion }}</p>
-      <p>Precio: ${{ product.precio }}</p>
-      <!-- Otros detalles del producto aquí -->
-    </div>
-  </template>
-  

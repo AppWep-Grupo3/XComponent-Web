@@ -38,8 +38,11 @@
   
           <!-- Botones "Iniciar Sesión" y "Carrito" -->
           <pv-button label="Iniciar Sesión" icon="pi pi-sign-in" @click="onLoginClick" />
-          <pv-button label="Carrito" icon="pi pi-shopping-cart" @click="onCartClick" />
-        </template>
+          
+          <router-link to="/car">
+           <pv-button label="Carrito" icon="pi pi-shopping-cart" />
+         </router-link>          
+         </template>
       </pv-menubar>
     </div>
   </template>
