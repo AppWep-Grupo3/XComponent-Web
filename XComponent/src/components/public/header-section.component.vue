@@ -38,28 +38,36 @@
   
           <!-- Botones "Iniciar Sesión" y "Carrito" -->
           <pv-button label="Iniciar Sesión" icon="pi pi-sign-in" @click="onLoginClick" />
-          
+         
           <router-link to="/car">
            <pv-button label="Carrito" icon="pi pi-shopping-cart" />
-         </router-link>          
+          </router-link> 
+
+         <router-link to="/plan">
+          <pv-button label="Planes"/>        
+         </router-link>
+          
          </template>
       </pv-menubar>
     </div>
   </template>
   
   <script>
+import router from '../../router';
+
   export default {
     name: "header-section",
     data() {
-      return {
-        searchTerm: "",
-        componentesUrl: "/componentes", // Asegúrate de que esta ruta sea válida
-        perifericosUrl: "/perifericos", // Asegúrate de que esta ruta sea válida
-        monitoresUrl: "/monitores", // Asegúrate de que esta ruta sea válida
-        laptopsUrl: "/laptops" // Asegúrate de que esta ruta sea válida
-      };
-    }
-  };
+        return {
+            searchTerm: "",
+            componentesUrl: "/componentes",
+            perifericosUrl: "/perifericos",
+            monitoresUrl: "/monitores",
+            laptopsUrl: "/laptops" // Asegúrate de que esta ruta sea válida
+        };
+    },
+    components: { router }
+};
   </script>
   
   <style scoped>

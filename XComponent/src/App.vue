@@ -4,6 +4,7 @@ import { computed, onMounted } from 'vue';
 import HeaderSection from "./components/public/header-section.component.vue";
 import FooterSection from "./components/public/footer-section.component.vue";
 import {useStore} from 'vuex';
+import plan from './components/plan.vue'; 
 
 
 
@@ -11,7 +12,8 @@ export default{
     name: "App",
     components:{
         HeaderSection,
-        FooterSection
+        FooterSection,
+        plan
     },
     setup(){
         const store = useStore()

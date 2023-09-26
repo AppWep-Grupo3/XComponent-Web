@@ -4,6 +4,9 @@ import ProducDetail from '../views/produc-detail.vue'
 import ProductoCard from '../components/producto-card.component.vue'
 import HomeView from '../views/home-view.vue'
 import car from '../components/car.component.vue'
+import plan from '../components/plan.vue' 
+
+
 
 const routes = [
   {
@@ -27,8 +30,13 @@ const routes = [
       path: '/car',
       name: 'car',
       component: car, // Esta debe ser la componente que muestra todos los productos
-      
-  }
+    },
+    {
+      path: '/plan',
+      name: 'plan',
+      component: plan,
+    }
+  
  
 ]
   
