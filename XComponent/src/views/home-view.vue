@@ -1,27 +1,23 @@
 <script>
 
-  import { ref,reactive } from "vue";
+  //import { ref,reactive, onMounted } from "vue";
   import ProductoCard from "../components/producto-card.component.vue";
-  import { db } from "../Data/productos";
-  const state = reactive( {productos: db})
-  const data=state.productos
-  console.log(state.productos[0])
-  
+  //import { db } from "../Data/productos";
 
+  import {mapState} from 'vuex'
+
+
+  
 
 export default {
     name: "HomeView",
+    computed:{
+      ...mapState(['productos'])
+    },
     components: {
       ProductoCard,
-      
     },
-    setup() {
-       
-      return {
-       
-        productos:data
-      };
-    },
+   
   };
 </script>
 
@@ -30,7 +26,9 @@ export default {
     
     <div class="home-view">
       
+      
       <div class="product-grid">
+       
         <producto-card :productos="productos" />
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import store from './store'
 
 import PrimeVue from "primevue/config";
 
@@ -9,6 +10,10 @@ import PrimeVue from "primevue/config";
 import 'primevue/resources/themes/md-light-indigo/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
+
+//Add Bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 //Add PrimeFlex
 import 'primeflex/primeflex.css';
@@ -27,6 +32,7 @@ createApp(App)
     .component('pv-menubar', Menubar)
     .component('pv-button', Button)
     .use(router)
+    .use(store)
    
 
 
