@@ -5,7 +5,7 @@ import ProductoCard from '../components/producto-card.component.vue'
 import HomeView from '../views/home-view.vue'
 import car from '../components/car.component.vue'
 import plan from '../components/plan.vue' 
-
+import register from '../components/register-form.component.vue'
 
 
 const routes = [
@@ -35,8 +35,12 @@ const routes = [
       path: '/plan',
       name: 'plan',
       component: plan,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register,
     }
-  
  
 ]
   
