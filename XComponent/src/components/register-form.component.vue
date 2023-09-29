@@ -61,6 +61,8 @@
 
 <script>
 
+import axios from 'axios';
+
 export default {
   name: 'register',
   data() {
@@ -99,11 +101,28 @@ export default {
       if (!this.aceptaPoliticas) this.errores.aceptaPoliticas = 'Debes aceptar las políticas de privacidad.';
 
       if (Object.keys(this.errores).length === 0) {
-        this.$router.push('/home');
+        this.registrarse();
+        this.$router.push('/login');
       } else {
         alert('Se encontraron errores en el formulario. Por favor, revísalos y corrige.');
       }
     },
+
+    async registrarse(){
+        let result= await axios.post("http://localhost:3000/users", {
+          nombre: this.nombres,
+          apellido: this.apellidos,
+          email: this.email,
+          password: this.password,
+        });
+
+        console.warn("resultado", result);
+        if(result.status==201){
+          alert("Usuario registrado correctamente");
+          localStorage.setItem("user-info", JSON.stringify(result.data));
+        }
+    }
+
   },
 };
 </script>

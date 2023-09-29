@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="login-form">
-        <form @submit="iniciarSesion">
+        <form class="form-container" @submit.prevent="login">
           <div class="welcome-message">
             <h2>Bienvenidos a XComponents</h2>
             <img src="https://i.postimg.cc/MGbz58t3/pexels-andrey-matveev-11443548.jpg" alt="Imagen de ejemplo" style="width: 100px; height: 100px;" />
@@ -10,25 +10,21 @@
             <label for="correo">Correo Electrónico:</label>
             <input
               type="email"
-              id="correo"
-              v-model="correo"
-              name="correo"
-              rules="required|email"
+              v-model="email"
+              name="email"
+              
             />
-            <ErrorMessage name="correo" />
           </div>
           <div>
             <label for="contrasena">Contraseña:</label>
             <input
               type="password"
-              id="contrasena"
-              v-model="contrasena"
-              name="contrasena"
+              v-model="password"
+              name="password"
               rules="required"
             />
-            <ErrorMessage name="contrasena" />
           </div>
-          <button type="submit" class="buton" style="margin: 0 auto;">
+          <button class="btn btn-primary btn-block" style="margin: 0 auto;">
             Iniciar Sesión
           </button>
         </form>
@@ -38,26 +34,37 @@
   </template>
   
   <script>
-  export default {
-    data() {
-      return {
-        correo: '',
-        contrasena: '',
-      };
-    },
-    methods: {
-      iniciarSesion() {
-        // Realiza la lógica de inicio de sesión aquí si el formulario es válido
-        if (this.$refs.form.validate()) {
-          console.log('Formulario de inicio de sesión válido.');
-          // Llamar a una API o realizar otras acciones de inicio de sesión aquí
-        } else {
-          console.log('Formulario de inicio de sesión no válido. Revise los errores.');
+import axios from 'axios';
+
+export default {
+  name: 'login',
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+
+    async login(){
+      let result = await axios.get(
+        'http://localhost:3000/users?email='+this.email+'&password='+this.password
+      )
+
+      if(result.status==200 && result.data.length>0){
+          alert("Usuario inicio sesión correctamente");
+          localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+          this.$router.push('/home');
         }
-      },
-    },
-  };
-  </script>
+        else {
+          alert("Usuario o contraseña incorrectos");
+        }
+
+      console.log(result);
+    }
+  }
+};
+</script>
   
   <style>
   .container {

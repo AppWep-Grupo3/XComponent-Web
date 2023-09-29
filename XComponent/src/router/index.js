@@ -6,7 +6,7 @@ import HomeView from '../views/home-view.vue'
 import car from '../components/car.component.vue'
 import plan from '../components/plan.vue' 
 import register from '../components/register-form.component.vue'
-
+import login from '../components/login-form.component.vue'
 
 const routes = [
   {
@@ -40,6 +40,11 @@ const routes = [
       path: '/register',
       name: 'register',
       component: register,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login,
     }
  
 ]
