@@ -1,88 +1,143 @@
 <template>
-    <div>
-      <pv-menubar class="custom-menu">
-        <template #start>
-          <img alt="logo" src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" height="70" class="mr-2" />
-        </template>
-        <template #item="{ label, item, props }">
-          <a :href="item.route" v-bind="props.action">
-            <span v-bind="props.icon" />
-            <span v-bind="props.label">{{ label }}</span>
-          </a>
-          <a :href="item.url" :target="item.target" v-bind="props.action">
-            <span v-bind="props.icon" />
-            <span v-bind="props.label">{{ label }}</span>
-          </a>
-        </template>
-        <template #end>
-          <!-- Botones "Componentes", "Periféricos", "Monitores" y "Laptops" -->
-          <a :href="componentesUrl" class="custom-button">
-            <span class="pi pi-cog"></span>
-            <span>Componentes</span>
-          </a>
-          <a :href="perifericosUrl" class="custom-button">
-            <span class="pi pi-desktop"></span>
-            <span>Periféricos</span>
-          </a>
-          <a :href="monitoresUrl" class="custom-button">
-            <span class="pi pi-tv"></span>
-            <span>Monitores</span>
-          </a>
-          <a :href="laptopsUrl" class="custom-button">
-            <span class="pi pi-laptop"></span>
-            <span>Laptops</span>
-          </a>
-  
-          <!-- Campo de búsqueda -->
-          <InputText v-model="searchTerm" placeholder="Buscar" type="text" class="p-d-flex p-jc-center p-ai-center p-inputtext" />
-  
-          <!-- Botones "Iniciar Sesión" y "Carrito" -->
-          <router-link to="iniciarSesion">
-          <pv-button label="Iniciar Sesión" icon="pi pi-sign-in" @click="onLoginClick" />
-        </router-link>
-         
-          <router-link to="/car">
-           <pv-button label="Carrito" icon="pi pi-shopping-cart" />
-          </router-link> 
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img alt="logo" src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" height="70" class="mr-2" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavMobile"
+        aria-controls="navbarNavMobile"
+        aria-expanded="false"
+        :aria-label="mobileMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+        @click="toggleMobileMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+            <div class="navbar-collapse" :class="{ show: mobileMenuOpen }" id="navbarNavMobile">
+              <ul class="navbar-nav">
+                <li v-for="(item, index) in menuItems" :key="index" class="nav-item">
+                  <router-link :to="item.route" class="nav-link" @click="closeMobileMenu">
+                    <i :class="item.icon"></i>
+                    {{ item.label }}
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
+                    <i class="pi pi-sign-in"></i>
+                    Iniciar Sesión
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/plan" class="nav-link" @click="closeMobileMenu">
+                    Planes
+                  </router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</template>
 
-         <router-link to="/plan">
-          <pv-button label="Planes"/>        
-         </router-link>
-          
-         </template>
-      </pv-menubar>
-    </div>
-  </template>
-  
-  <script>
+<script>
 import router from '../../router';
 
-  export default {
-    name: "header-section",
-    data() {
-        return {
-            searchTerm: "",
-            componentesUrl: "/componentes",
-            perifericosUrl: "/perifericos",
-            monitoresUrl: "/monitores",
-            laptopsUrl: "/laptops" // Asegúrate de que esta ruta sea válida
-        };
+export default {
+  name: "header-section",
+  data() {
+    return {
+      menuItems: [
+        { label: "Inicio", route: "/", icon: "pi pi-home" },
+        { label: "Productos", route: "/productos", icon: "pi pi-th-large" },
+        { label: "Contacto", route: "/contacto", icon: "pi pi-envelope" }
+      ],
+      mobileMenuOpen: false
+    };
+  },
+  components: { router },
+  methods: {
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
-    components: { router }
+    closeMobileMenu() {
+      this.mobileMenuOpen = false;
+    }
+  }
 };
-  </script>
-  
-  <style scoped>
-  /* Estilos CSS personalizados para el menú */
-  .custom-menu {
-    background-color: black; /* Fondo negro */
-    
+</script>
+
+<style scoped>
+/* Estilos CSS personalizados para el menú */
+.navbar {
+  background-color: #333;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  margin-right: 20px;
+}
+
+.nav-link i {
+  margin-right: 5px;
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    display: none;
   }
-  
-  /* Estilos para hacer que las letras sean blancas y eliminar los bordes de los botones */
-  .custom-button {
-    color: white !important; /* Texto blanco */
-    border: none !important; /* Elimina los bordes */
+
+  .navbar-toggler {
+    margin-top: 10px;
   }
-  </style>
-  
+
+  .nav-item {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  /* Mostrar el menú de hamburguesa cuando se hace clic en el botón de hamburguesa */
+  .navbar-toggler:focus + .navbar-collapse,
+  .navbar-toggler:active + .navbar-collapse {
+    display: flex;
+  }
+
+  /* Estilos para los botones en el menú de hamburguesa */
+  .navbar-collapse ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar-collapse li {
+    margin: 10px 0;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+}
+</style>
