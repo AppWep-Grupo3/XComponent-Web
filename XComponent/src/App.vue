@@ -5,6 +5,7 @@ import HeaderSection from "./components/public/header-section.component.vue";
 import FooterSection from "./components/public/footer-section.component.vue";
 import {useStore} from 'vuex';
 import plan from './components/plan.vue'; 
+import iniciarSesion from './components/login-form.component.vue'
 
 
 
@@ -13,7 +14,8 @@ export default{
     components:{
         HeaderSection,
         FooterSection,
-        plan
+        plan,
+        iniciarSesion,
     },
     setup(){
         const store = useStore()

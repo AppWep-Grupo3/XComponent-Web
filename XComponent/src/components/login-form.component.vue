@@ -1,10 +1,11 @@
 <template>
-    <div class="container">
+    <div class="container1">
+      <img src="https://img.freepik.com/fotos-premium/espacio-trabajo-computadora-portatil-manos-nina-ordenador-plano_264197-16134.jpg" alt="">
       <div class="login-form">
         <form @submit="iniciarSesion">
           <div class="welcome-message">
             <h2>Bienvenidos a XComponents</h2>
-            <img src="https://i.postimg.cc/MGbz58t3/pexels-andrey-matveev-11443548.jpg" alt="Imagen de ejemplo" style="width: 100px; height: 100px;" />
+            <img src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" alt="Imagen de ejemplo" style="width: 200px; height: 100px;" />
           </div>
           <div>
             <label for="correo">Correo Electrónico:</label>
@@ -60,16 +61,14 @@
   </script>
   
   <style>
-  .container {
+  .container1 {
     display: flex;
-    background-image: url('https://i.postimg.cc/MGbz58t3/pexels-andrey-matveev-11443548.jpg');
-    background-size: cover;
     height: 100vh;
   }
   
   .welcome-message {
     flex: 1;
-    color: #fff;
+    color: #070707;
     text-align: center;
   }
   
