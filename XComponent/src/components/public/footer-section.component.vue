@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-grid footer">
+  <footer class="footer">
     <div class="p-col">
       <h3 class="footer-title">GARANTÍAS</h3>
       <ul>
@@ -54,15 +54,20 @@
   background-color: #333;
   color: #fff;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  align-items: flex-start;
-  gap: 20px;
+  display: flex; /* Mostrar elementos en una fila horizontal */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si no caben */
+  justify-content: space-between; /* Espacio uniforme entre elementos */
+  align-items: flex-start; /* Alinear elementos en la parte superior */
 }
 
 .footer-title {
   text-decoration: underline;
   margin-bottom: 10px;
+}
+
+.p-col {
+  flex: 1; /* Distribuir espacio uniformemente entre elementos */
+  margin-right: 20px; /* Espacio entre elementos */
 }
 
 ul {
@@ -76,19 +81,12 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .footer {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-
   .p-col {
     width: 100%;
-    margin-bottom: 5px;
-  }
-}
-
-@media (min-width: 1625px) {
-  .footer {
-    grid-template-columns: repeat(4, 1fr);
+    margin-right: 0; /* Eliminar espacio entre elementos en pantallas pequeñas */
+    margin-bottom: 20px;
   }
 }
 </style>
+
+     

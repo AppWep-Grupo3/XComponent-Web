@@ -37,7 +37,9 @@
           <InputText v-model="searchTerm" placeholder="Buscar" type="text" class="p-d-flex p-jc-center p-ai-center p-inputtext" />
   
           <!-- Botones "Iniciar Sesión" y "Carrito" -->
+          <router-link to="iniciarSesion">
           <pv-button label="Iniciar Sesión" icon="pi pi-sign-in" @click="onLoginClick" />
+        </router-link>
          
           <router-link to="/car">
            <pv-button label="Carrito" icon="pi pi-shopping-cart" />
