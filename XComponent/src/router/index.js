@@ -7,6 +7,7 @@ import car from '../components/car.component.vue'
 import plan from '../components/plan.vue' 
 import register from '../components/register-form.component.vue'
 import login from '../components/login-form.component.vue'
+import iniciarSesion from '../components/login-form.component.vue'
 
 const routes = [
   {
@@ -46,7 +47,7 @@ const routes = [
       name: 'login',
       component: login,
     }
- 
+  
 ]
   
 

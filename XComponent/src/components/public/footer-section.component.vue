@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-grid footer">
+  <footer class="footer">
     <div class="p-col">
       <h3 class="footer-title">GARANTÍAS</h3>
       <ul>
@@ -11,7 +11,7 @@
         <li>Modalidades de pago</li>
       </ul>
     </div>
-  
+
     <div class="p-col">
       <h3 class="footer-title">ACERCA DE NOSOTROS</h3>
       <ul>
@@ -35,7 +35,7 @@
         </li>
       </ul>
     </div>
-  
+
     <div class="p-col">
       <h3 class="footer-title">CONTACTOS</h3>
       <ul>
@@ -54,15 +54,20 @@
   background-color: #333;
   color: #fff;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .footer-title {
   text-decoration: underline;
   margin-bottom: 10px;
+}
+
+.p-col {
+  flex: 1;
+  margin-right: 20px;
 }
 
 ul {
@@ -76,19 +81,12 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .footer {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-
   .p-col {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-}
-
-@media (min-width: 1625px) {
-  .footer {
-    grid-template-columns: repeat(4, 1fr);
+    flex: 1 1 100%; /* Change flex settings to make elements stack on top of each other */
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 </style>
+
+     
