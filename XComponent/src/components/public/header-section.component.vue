@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
       <a class="navbar-brand" href="#">
-        <img alt="logo" src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" height="70" class="mr-2" />
+        <img alt="logo" src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" height="70"  class="ml-3" />
       </a>
       <button
         class="navbar-toggler"
@@ -25,19 +25,29 @@
                     {{ item.label }}
                   </router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
-                    <i class="pi pi-sign-in"></i>
-                    Iniciar Sesión
-                  </router-link>
-                </li>
+                
                 <li class="nav-item">
                   <router-link to="/plan" class="nav-link" @click="closeMobileMenu">
                     Planes
                   </router-link>
-          </li>
-        </ul>
-      </div>
+                </li>
+
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
+                    <i class="pi pi-user"></i>
+                    Iniciar Sesión
+                  </router-link>
+                </li>
+
+                <li class="nav-item" style="margin-right: 20px;">
+                  <router-link to="/car">
+                  <pv-button label="Carrito" icon="pi pi-shopping-cart" class="custom-button" />
+                  </router-link>
+                </li>
+              </ul>
+            </div>
     </nav>
   </div>
 </template>
@@ -90,6 +100,12 @@ export default {
 
 .nav-link i {
   margin-right: 5px;
+}
+
+.custom-button{
+  background-color: #FFC700; /* Cambiar a amarillo */
+  color: white; /* Cambiar a blanco */
+  border: none; /* Eliminar borde si es necesario */
 }
 
 /* Estilos para pantallas pequeñas (responsive) */

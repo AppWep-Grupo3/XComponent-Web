@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="text-center">
+        <div>
     <th scope="row" colspan="2">Total productos</th>
       <td>{{totalCantidad}}</td>
       <td>
@@ -9,6 +10,7 @@
     </td>
     <td class="font-weight-bold">$ <span>{{totalPrecio}}</span></td>
     </div>
+</div>
 </template>
 
 
