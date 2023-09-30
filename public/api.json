@@ -248,7 +248,7 @@
   {
     "id": 7,
     "nombre": "Tableta gráfica profesional",
-    "imagen": "tableta.jpg",
+    "imagen": "https://www.clipstudio.net/wp-content/uploads/2020/02/0028_007-1.jpg",
     "descripcion": "Una tableta gráfica profesional para artistas digitales y diseñadores.",
     "precio": 299.99,
     "detallesGenerales": "Área activa: 10 x 6 pulgadas | Niveles de presión: 8192 | Teclas programables: 8",
@@ -289,7 +289,7 @@
   {
     "id": 8,
     "nombre": "Tarjeta gráfica GeForce RTX 3080",
-    "imagen": "tarjetagrafica.jpg",
+    "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg",
     "descripcion": "Una potente tarjeta gráfica para juegos de alta gama y renderizado.",
     "precio": 699.99,
     "detallesGenerales": "Modelo: GeForce RTX 3080 | Interfaz: PCI Express 4.0 | VRAM: 10 GB GDDR6X",
@@ -330,7 +330,7 @@
   {
     "id": 9,
     "nombre": "Procesador Intel Core i9-11900K",
-    "imagen": "procesador.jpg",
+    "imagen": "https://i.postimg.cc/DZnT26Bw/cpili911900k.jpg",
     "descripcion": "Un procesador de última generación para un rendimiento excepcional.",
     "precio": 549.99,
     "detallesGenerales": "Modelo: Intel Core i9-11900K | Núcleos: 8 | Hilos: 16 | Frecuencia base: 3.5 GHz",
@@ -371,7 +371,7 @@
   {
     "id": 10,
     "nombre": "Placa madre ASUS ROG Strix Z590-E",
-    "imagen": "placamadre.jpg",
+    "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg",
     "descripcion": "Una placa madre de alta gama con características avanzadas de overclocking.",
     "precio": 279.99,
     "detallesGenerales": "Tipo de placa madre: ATX | Socket: LGA 1200 | Chipset: Intel Z590 | Ranuras PCIe: 3 x PCIe 4.0 x16",
@@ -412,7 +412,7 @@
   {
     "id": 11,
     "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
-    "imagen": "memoriaram.jpg",
+    "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg",
     "descripcion": "Memoria RAM de alto rendimiento para una experiencia informática fluida.",
     "precio": 149.99,
     "detallesGenerales": "Capacidad: 32GB (2 x 16GB) | Tipo: DDR4 | Velocidad: 3200 MHz | Latencia: CL16",
@@ -453,7 +453,7 @@
   {
     "id": 12,
     "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
-    "imagen": "ssd.jpg",
+    "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg",
     "descripcion": "Unidad SSD ultrarrápida para una mayor velocidad de carga y transferencia de datos.",
     "precio": 129.99,
     "detallesGenerales": "Capacidad: 1TB | Interfaz: NVMe PCIe | Velocidad de lectura: 3500 MB/s | Velocidad de escritura: 2500 MB/s",
@@ -494,7 +494,7 @@
   {
     "id": 13,
     "nombre": "Monitor 4K",
-    "imagen": "4kmonitor.jpg",
+    "imagen": "https://i.postimg.cc/4Nk29ypr/Philips-279-C9.jpg",
     "descripcion": "Un monitor de resolución ultra HD para una experiencia visual impresionante.",
     "precio": 499.99,
     "detallesGenerales": "Tipo de monitor: 4K | Tamaño de pantalla: 28 pulgadas | Resolución: 3840x2160",
@@ -535,7 +535,7 @@
   {
     "id": 14,
     "nombre": "Fuente de alimentación de alta potencia",
-    "imagen": "power-supply.jpg",
+    "imagen": "https://i.postimg.cc/wM5F954g/220-G5-0750-X1-XL-1.jpg",
     "descripcion": "Una fuente de alimentación de 750W Gold para sistemas de alta potencia.",
     "precio": 89.99,
     "detallesGenerales": "Potencia: 750W | Certificación: 80 PLUS Gold | Modular: Totalmente modular",
