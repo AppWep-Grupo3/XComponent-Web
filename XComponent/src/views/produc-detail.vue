@@ -295,6 +295,7 @@ export default {
   padding: 3px 25px;
   border-radius: 20px;
   border: none;
+  
 }
 
 
