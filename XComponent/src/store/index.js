@@ -31,7 +31,10 @@ export default createStore({
             if(state.carrito[payload].cantidad === 0){
                 delete state.carrito[payload];
             }
-        }
+        },
+        //////////////////////////
+
+       
 
     },
     actions:{
