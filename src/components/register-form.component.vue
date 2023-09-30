@@ -102,7 +102,7 @@ export default {
 
       if (Object.keys(this.errores).length === 0) {
         this.registrarse();
-        this.$router.push('/login');
+        this.$router.push('/iniciarSesion');
       } else {
         alert('Se encontraron errores en el formulario. Por favor, revísalos y corrige.');
       }
@@ -132,7 +132,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    height: 800px;
     border-radius: 40px;
     border: 2px solid #252525;
     margin: 40px auto;
@@ -154,7 +154,7 @@ export default {
   .form-container {
     width: 30%;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 10px;

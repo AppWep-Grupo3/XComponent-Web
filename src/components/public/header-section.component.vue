@@ -35,6 +35,12 @@
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                  <router-link to="register" class="nav-link" @click="closeMobileMenu">
+                    <i class="pi pi-user"></i>
+                    Registrarse
+                  </router-link>
+                </li>
+                <li class="nav-item">
                   <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
                     <i class="pi pi-user"></i>
                     Iniciar Sesión

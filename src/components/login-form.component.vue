@@ -1,7 +1,7 @@
 <template>
   <div class="container1">
     <div class="login-form">
-      <form @submit="iniciarSesion">
+      <form class="form-container" @submit.prevent="login">
         <div class="welcome-message">
           <h2>Bienvenidos a XComponents</h2>
           <img src="https://cdn.discordapp.com/attachments/1044480806938230784/1155039752442097714/image.png" alt="Imagen de ejemplo" style="width: 200px; height: 100px;" />
@@ -15,7 +15,6 @@
             name="correo"
             rules="required|email"
           />
-          <ErrorMessage name="correo" />
         </div>
         <div>
           <label for="contrasena">Contraseña:</label>
@@ -26,11 +25,10 @@
             name="contrasena"
             rules="required"
           />
-          <ErrorMessage name="contrasena" />
         </div>
-        <button type="submit" class="buton">
-          Iniciar Sesión
-        </button>
+        <button class="btn btn-warning btn-block">
+            Iniciar Sesión
+          </button>
       </form>
       <p>¿No tienes una cuenta? <router-link to="/register">Regístrate aquí</router-link></p>
     </div>
@@ -38,7 +36,10 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
+  name: 'iniciarSesion',
   data() {
     return {
       correo: '',
@@ -46,14 +47,22 @@ export default {
     };
   },
   methods: {
-    iniciarSesion() {
-      if (this.$refs.form.validate()) {
-        console.log('Formulario de inicio de sesión válido.');
-      } else {
-        console.log('Formulario de inicio de sesión no válido. Revise los errores.');
-      }
-    },
-  },
+
+    async login(){
+      let result = await axios.get(
+        'http://localhost:3000/users?email='+this.correo+'&password='+this.contrasena
+      )
+
+      if(result.status==200 && result.data.length>0){
+          alert("Usuario inicio sesión correctamente");
+          localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+          this.$router.push('/home');
+        }
+        else {
+          alert("Usuario o contraseña incorrectos");
+        }
+    }
+  }
 };
 </script>
 
@@ -62,8 +71,8 @@ export default {
   display: flex;
   height: 100vh;
   background-image: url("https://cdn.discordapp.com/attachments/1044480806938230784/1157370826740477972/image.png?ex=65185d14&is=65170b94&hm=ceb4c19702d5231caa83cacae4c6487613c6caa835ce993c0969555397004cb6&"); ;
-  background-size: cover; /* Añadir esta línea */
-  background-repeat: no-repeat; /* Evitar que se repita la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .welcome-message {
@@ -136,7 +145,6 @@ router-link:hover {
 }
 
 @media (max-width: 768px) {
-  /* Estilos para pantallas pequeñas (responsive) */
   .login-form {
     width: 80%;
     transform: translate(-50%, -50%);
