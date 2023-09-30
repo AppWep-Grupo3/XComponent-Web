@@ -61,7 +61,9 @@ export default {
 .container1 {
   display: flex;
   height: 100vh;
-  background-color: yellow;
+  background-image: url("https://cdn.discordapp.com/attachments/1044480806938230784/1157370826740477972/image.png?ex=65185d14&is=65170b94&hm=ceb4c19702d5231caa83cacae4c6487613c6caa835ce993c0969555397004cb6&"); ;
+  background-size: cover; /* Añadir esta línea */
+  background-repeat: no-repeat; /* Evitar que se repita la imagen */
 }
 
 .welcome-message {
@@ -77,7 +79,7 @@ export default {
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,11 +103,12 @@ input[type="password"] {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  width: auto;
+  background-color: #FFC700;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 5px;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   cursor: pointer;
 }
 

@@ -12,8 +12,8 @@
       <template #content>
         <!-- Mostrar otros detalles del producto -->
         
-        <p>{{ producto.descripcion }}</p>
-        <p>Precio: ${{ producto.precio }}</p>
+        <p class="descr-general">{{ producto.descripcion }}</p>
+        <p class="precio-general">Precio: ${{ producto.precio }}</p>
       </template>
       <template #footer>
         <!-- Contenido del pie de la tarjeta -->
@@ -68,7 +68,7 @@ export default {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: yellow;
+  background-color: #FFC700;
   border: 2px solid white;
   border-radius: 10px;
   color: white;
@@ -78,5 +78,12 @@ export default {
 
 .product-card .btn:hover {
   background-color: orange;
+}
+
+.precio-general{
+  color: #ff0505;
+}
+.descr-general{
+  color: #5e5d5b;
 }
 </style>

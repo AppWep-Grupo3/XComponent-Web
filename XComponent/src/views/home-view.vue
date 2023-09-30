@@ -11,6 +11,7 @@
 
 export default {
     name: "HomeView",
+    
     computed:{
       ...mapState(['productos'])
     },
@@ -33,6 +34,14 @@ export default {
       </div>
     </div>
   </template>
+
+<style>
+
+  .home-view{
+    background-color: #fff;
+  }
+
+</style>
   
   
 
