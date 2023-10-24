@@ -1,5 +1,3 @@
-
-
 import { createApp } from 'vue'
 import App from './App.vue'
 import store from './store'
@@ -12,6 +10,7 @@ import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
 
 //Add Bootstrap
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
@@ -23,7 +22,7 @@ import Card from 'primevue/card';
 import Menubar from 'primevue/menubar';
 import Button from 'primevue/button';
 import router from './router'
-
+import InputText from 'primevue/inputtext';
 
 
 createApp(App)
