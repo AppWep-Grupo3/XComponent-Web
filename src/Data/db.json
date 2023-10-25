@@ -8,10 +8,10 @@
       "id": 1
     },
     {
-      "nombre": "Mario",
-      "apellido": "Lopez",
+      "nombre": "Mario ",
+      "apellido": "Lopez ",
       "email": "Mario@gmail.com",
-      "password": "M123",
+      "password": "M1234",
       "id": 2
     },
     {
