@@ -7,7 +7,7 @@ import car from '../components/car.component.vue'
 import plan from '../components/plan.vue' 
 import iniciarSesion from '../components/login-form.component.vue'
 import register from '../components/register-form.component.vue'
-
+import accountEdit from '../components/account-edit.component.vue'
 
 const routes = [
   {
@@ -46,9 +46,13 @@ const routes = [
       path: '/register',
       name: 'register',
       component: register,
+    },
+    {
+      path: '/accountEdit',
+      name: 'accountEdit',
+      component: accountEdit,
     }
   
- 
 ]
   
 

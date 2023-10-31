@@ -3,9 +3,23 @@
     {
       "nombre": "NameTest",
       "apellido": "ApellidoTest",
-      "email": "test1@gmail.com",
-      "password": "TestPassword123",
+      "email": "TestEmail@gmail.com",
+      "password": "TestPassword1234",
       "id": 1
+    },
+    {
+      "nombre": "Mario ",
+      "apellido": "Lopez ",
+      "email": "Mario@gmail.com",
+      "password": "M1234",
+      "id": 2
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Perez",
+      "email": "Lucas@gmail.com",
+      "password": "L12345",
+      "id": 3
     }
   ]
 }
