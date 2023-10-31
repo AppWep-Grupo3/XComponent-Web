@@ -67,7 +67,7 @@ export default {
     return {
       menuItems: [
         { label: "Inicio", route: "/", icon: "pi pi-home" },
-        { label: "Productos", route: "/productos", icon: "pi pi-th-large" },
+        { label: "Cuenta", route: "/accountEdit", icon: "pi pi-th-large" },
         { label: "Contacto", route: "/contacto", icon: "pi pi-envelope" }
       ],
       mobileMenuOpen: false
