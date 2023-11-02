@@ -1,0 +1,580 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teclado mecánico",
+    "imagen": "https://cdn.shopify.com/s/files/1/0564/3612/9997/products/hyperx_alloy_origins_us_1_top_down_large.jpg?v=1663982727",
+    "descripcion": "Un teclado mecánico de alta calidad para jugadores y escritores.",
+    "precio": 89.99,
+    "detallesGenerales": "Tipo de teclado: Mecánico | Conexión: USB | Diseño: QWERTY | Iluminación: RGB personalizable",
+    "detallesEspecificos": "Interruptores: Switches Cherry MX | Material: Aluminio resistente | Anti-Ghosting: Sí",
+    "productosRelacionados": [
+      
+      {
+        
+        "nombre": "Mousepad Gaming",
+        "especificacion": "Tamaño grande",
+        "precio": 14.99,
+        "imagen": "https://www.atpshop.pe/wp-content/uploads/2022/09/1-1.jpg"
+      },
+      {
+        "nombre": "Auriculares Gaming",
+        "especificacion": "Sonido envolvente",
+        "precio": 69.99,
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/26883460-512-512/null.jpg"
+      },
+      {
+        "nombre": "Silla Gamer",
+        "especificacion": "Ergonómica",
+        "precio": 199.99,
+        "imagen": "https://burana.com.pe/wp-content/uploads/2022/01/RAAZ_1.jpg"
+      },
+      {
+        "nombre": "Mouse Gaming",
+        "especificacion": "Alta precisión",
+        "precio": 49.99,
+        "imagen": "https://compusystemperu.com/wp-content/uploads/2021/02/g360_3.jpg"
+      },
+      {
+        "nombre": "Teclado numérico",
+        "especificacion": "Con cable",
+        "precio": 24.99,
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8r01Y-tL0RikZuH2YjyW_GncRqUE2N3lnQ&usqp=CAU"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Ratón inalámbrico",
+    "imagen": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/s/mshxpulsefsrgb_3.jpg",
+    "descripcion": "Un ratón inalámbrico ergonómico con botones programables.",
+    "precio": 39.99,
+    "detallesGenerales": "Tipo de ratón: Inalámbrico | DPI ajustable: Sí | Botones programables: 6 | Sensor: Óptico",
+    "detallesEspecificos": "Conexión: USB-A receptor | Batería: Recargable | Compatibilidad: Windows y macOS",
+    "productosRelacionados": [
+      {
+        "nombre": "Teclado mecánico",
+        "especificacion": "Teclas retroiluminadas",
+        "precio": 89.99,
+        "imagen": "https://cdn.shopify.com/s/files/1/0564/3612/9997/products/hyperx_alloy_origins_us_1_top_down_large.jpg?v=1663982727"
+      },
+      {
+        "nombre": "Mousepad Gaming",
+        "especificacion": "Tamaño grande",
+        "precio": 14.99,
+        "imagen": "https://i.postimg.cc/gjJMYLh7/descarga-11.jpg"
+      },
+      {
+        "nombre": "Auriculares Gaming",
+        "especificacion": "Sonido envolvente",
+        "precio": 69.99,
+        "imagen": "https://i.postimg.cc/sgSTDrB3/descarga-12.jpg"
+      },
+      {
+        "nombre": "Silla Gamer",
+        "especificacion": "Ergonómica",
+        "precio": 199.99,
+        "imagen": "https://i.postimg.cc/1XfHxhhh/descarga-13.jpg"
+      },
+      {
+        "nombre": "Mouse Gaming",
+        "especificacion": "Alta precisión",
+        "precio": 49.99,
+        "imagen": "https://i.postimg.cc/dDcT5zJ9/descarga-14.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Impresora láser",
+    "imagen": "https://tecsoftcomputer.com.pe/370-large_default/impresora-laser-samsung-xpress-m2020w.jpg",
+    "descripcion": "Una impresora láser rápida y eficiente para documentos de alta calidad.",
+    "precio": 199.99,
+    "detallesGenerales": "Tipo de impresora: Láser | Conexión: USB y Wi-Fi | Velocidad de impresión: 20 ppm",
+    "detallesEspecificos": "Resolución máxima: 1200 x 1200 dpi | Tamaño máximo de papel: A4 | Impresión dúplex: No",
+    "productosRelacionados": [
+      {
+        "nombre": "Papel de impresora",
+        "especificacion": "Paquete de 500 hojas",
+        "precio": 9.99,
+        "imagen": "https://i.postimg.cc/CL0H0Qyq/descarga-15.jpg"
+      },
+      {
+        "nombre": "Tóner de repuesto",
+        "especificacion": "Compatible con la impresora láser",
+        "precio": 29.99,
+        "imagen": "https://i.postimg.cc/MGgVFsbX/images.jpg"
+      },
+      {
+        "nombre": "Escáner de documentos",
+        "especificacion": "Alta resolución",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/59sN9XTS/images-1.jpg"
+      },
+      {
+        "nombre": "Cartuchos de tinta",
+        "especificacion": "Para impresoras de inyección de tinta",
+        "precio": 19.99,
+        "imagen": "https://i.postimg.cc/VNg29Cj7/Cartucho-de-Tina-HP-712-Negro-80ml-1.jpg"
+      },
+      {
+        "nombre": "Pantalla de proyector",
+        "especificacion": "Tamaño grande",
+        "precio": 199.99,
+        "imagen": "https://i.postimg.cc/QNKhDfgh/descarga-16.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Auriculares con cancelación de ruido",
+    "imagen": "https://img.pccomponentes.com/articles/30/306598/1968-snakebyte-heatset-fornite-para-nintendo-switch.jpg",
+    "descripcion": "Auriculares con tecnología de cancelación de ruido para una experiencia auditiva inmersiva.",
+    "precio": 149.99,
+    "detallesGenerales": "Tipo de auriculares: Over-ear | Cancelación de ruido: Sí | Conexión: Cable de 3.5 mm",
+    "detallesEspecificos": "Impedancia: 32 ohmios | Respuesta de frecuencia: 20 Hz - 20 kHz | Micrófono incorporado: Sí",
+    "productosRelacionados": [
+      {
+        "nombre": "Amplificador de audio",
+        "especificacion": "Potencia de salida elevada",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/SKRHrKDk/descarga-17.jpg"
+      },
+      {
+        "nombre": "Reproductor de música",
+        "especificacion": "Almacenamiento ampliable",
+        "precio": 79.99,
+        "imagen": "https://i.postimg.cc/28xJNWtC/images-2.jpg"
+      },
+      {
+        "nombre": "Micrófono de estudio",
+        "especificacion": "Grabación de alta calidad",
+        "precio": 69.99,
+        "imagen": "https://i.postimg.cc/m2cc03kH/descarga-19.jpg"
+      },
+      {
+        "nombre": "Altavoces Bluetooth",
+        "especificacion": "Sonido de alta calidad",
+        "precio": 79.99,
+        "imagen": "https://i.postimg.cc/rmPVJbSY/descarga-20.jpg"
+      },
+      {
+        "nombre": "Adaptador Bluetooth",
+        "especificacion": "Conexión inalámbrica",
+        "precio": 19.99,
+        "imagen": "https://i.postimg.cc/J4cnwTmt/descarga-21.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Monitor ultra ancho",
+    "imagen": "https://www.lg.com/pe/images/monitores/md07574741/gallery/D-03.jpg",
+    "descripcion": "Un monitor ultra ancho de 34 pulgadas para multitarea y juegos.",
+    "precio": 499.99,
+    "detallesGenerales": "Tipo de monitor: Ultra ancho | Tamaño de pantalla: 34 pulgadas | Resolución: 3440x1440",
+    "detallesEspecificos": "Tasa de refresco: 144Hz | Tiempo de respuesta: 4ms | Tecnología de panel: IPS | Conectividad: HDMI, DisplayPort",
+    "productosRelacionados": [
+      {
+        "nombre": "Soporte de monitor",
+        "especificacion": "Ajustable en altura",
+        "precio": 34.99,
+        "imagen": "https://i.postimg.cc/ZRFgYyqP/descarga-22.jpg"
+      },
+      {
+        "nombre": "Altavoces Bluetooth",
+        "especificacion": "Sonido de alta calidad",
+        "precio": 79.99,
+        "imagen": "https://i.postimg.cc/rmPVJbSY/descarga-20.jpg"
+      },
+      {
+        "nombre": "Tarjeta gráfica de alta gama",
+        "especificacion": "Para juegos intensivos",
+        "precio": 499.99,
+        "imagen": "https://i.postimg.cc/Cdyfvdjt/descarga-23.jpg"
+      },
+      {
+        "nombre": "Teclado y mouse inalámbricos",
+        "especificacion": "Diseño ergonómico",
+        "precio": 69.99,
+        "imagen": "https://i.postimg.cc/63g0XWrV/descarga-24.jpg"
+      },
+      {
+        "nombre": "Silla ergonómica",
+        "especificacion": "Comodidad durante largas sesiones",
+        "precio": 199.99,
+        "imagen": "https://i.postimg.cc/QCjMV5Jj/descarga-25.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Webcam de alta definición",
+    "imagen": "https://gamefactor.mx/images/galeria_articulos/WEB400-00_1.png",
+    "descripcion": "Una cámara web de alta definición para videoconferencias y transmisiones en vivo.",
+    "precio": 79.99,
+    "detallesGenerales": "Resolución: 1080p | Conexión: USB | Micrófono incorporado: Sí | Enfoque automático: Sí",
+    "detallesEspecificos": "Ángulo de visión: 78 grados | Compensación de luz automática: Sí | Montaje ajustable: Sí",
+    "productosRelacionados": [
+      {
+        "nombre": "Micrófono USB",
+        "especificacion": "Calidad de audio profesional",
+        "precio": 59.99,
+        "imagen": "https://i.postimg.cc/Kz2GsLVt/descarga-26.jpg"
+      },
+      {
+        "nombre": "Trípode para cámara",
+        "especificacion": "Ajustable en altura",
+        "precio": 24.99,
+        "imagen": "https://i.postimg.cc/rsYLcthn/descarga-27.jpg"
+      },
+      {
+        "nombre": "Fondo verde para croma",
+        "especificacion": "Chroma key",
+        "precio": 34.99,
+        "imagen": "https://i.postimg.cc/J7dwsZqK/FONDO-DE-TELA-VERDE-CROMA-3-X6-METROS.jpg"
+      },
+      {
+        "nombre": "Software de edición de video",
+        "especificacion": "Profesional",
+        "precio": 79.99,
+        "imagen": "https://i.postimg.cc/L6ZWh7h6/descarga-28.jpg"
+      },
+      {
+        "nombre": "Soporte para monitor",
+        "especificacion": "Eleva tu pantalla",
+        "precio": 19.99,
+        "imagen": "https://i.postimg.cc/ZRFgYyqP/descarga-22.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Tableta gráfica profesional",
+    "imagen": "https://www.clipstudio.net/wp-content/uploads/2020/02/0028_007-1.jpg",
+    "descripcion": "Una tableta gráfica profesional para artistas digitales y diseñadores.",
+    "precio": 299.99,
+    "detallesGenerales": "Área activa: 10 x 6 pulgadas | Niveles de presión: 8192 | Teclas programables: 8",
+    "detallesEspecificos": "Tecnología de lápiz: Electromagnético | Resolución: 5080 LPI | Conexión: USB",
+    "productosRelacionados": [
+      {
+        "nombre": "Kit de accesorios para tableta",
+        "especificacion": "Lápices adicionales y puntas",
+        "precio": 24.99,
+        "imagen": "https://i.postimg.cc/Qt9z5nSb/images-3.jpg"
+      },
+      {
+        "nombre": "Software de diseño gráfico",
+        "especificacion": "Licencia profesional",
+        "precio": 199.99,
+        "imagen": "https://i.postimg.cc/2539RKpD/descarga-29.jpg"
+      },
+      {
+        "nombre": "Guante de dibujo",
+        "especificacion": "Evita la fricción",
+        "precio": 9.99,
+        "imagen": "https://i.postimg.cc/L6Txqp2S/descarga-30.jpg"
+      },
+      {
+        "nombre": "Estuche protector",
+        "especificacion": "Para tabletas de 10 pulgadas",
+        "precio": 14.99,
+        "imagen": "https://i.postimg.cc/155pjN1x/descarga-31.jpg"
+      },
+      {
+        "nombre": "Teclado inalámbrico",
+        "especificacion": "Conexión Bluetooth",
+        "precio": 29.99,
+        "imagen": "https://i.postimg.cc/63g0XWrV/descarga-24.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Tarjeta gráfica GeForce RTX 3080",
+    "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg",
+    "descripcion": "Una potente tarjeta gráfica para juegos de alta gama y renderizado.",
+    "precio": 699.99,
+    "detallesGenerales": "Modelo: GeForce RTX 3080 | Interfaz: PCI Express 4.0 | VRAM: 10 GB GDDR6X",
+    "detallesEspecificos": "Núcleos CUDA: 8704 | Ray Tracing: Sí | DLSS: Sí | Conectividad: HDMI, DisplayPort",
+    "productosRelacionados": [
+      {
+        "nombre": "Monitor 4K",
+        "especificacion": "Pantalla ultra HD",
+        "precio": 499.99,
+        "imagen": "https://i.postimg.cc/Vkt5GYvQ/descarga-32.jpg"
+      },
+      {
+        "nombre": "Fuente de alimentación de alta potencia",
+        "especificacion": "750W Gold",
+        "precio": 89.99,
+        "imagen": "https://i.postimg.cc/8cqNM6hF/descarga-33.jpg"
+      },
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Rendimiento excepcional",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/j5BSQmTd/descarga-34.jpg"
+      },
+      {
+        "nombre": "Placa madre ASUS ROG Strix Z590-E",
+        "especificacion": "Overclocking avanzado",
+        "precio": 279.99,
+        "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg"
+      },
+      {
+        "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+        "especificacion": "Alta velocidad",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Procesador Intel Core i9-11900K",
+    "imagen": "https://i.postimg.cc/DZnT26Bw/cpili911900k.jpg",
+    "descripcion": "Un procesador de última generación para un rendimiento excepcional.",
+    "precio": 549.99,
+    "detallesGenerales": "Modelo: Intel Core i9-11900K | Núcleos: 8 | Hilos: 16 | Frecuencia base: 3.5 GHz",
+    "detallesEspecificos": "Frecuencia máxima: 5.3 GHz | Caché: 16 MB SmartCache | TDP: 125W | Socket: LGA 1200",
+    "productosRelacionados": [
+      {
+        "nombre": "Disipador de calor",
+        "especificacion": "Refrigeración eficiente",
+        "precio": 39.99,
+        "imagen": "https://i.postimg.cc/hGHkCBXw/descarga-35.jpg"
+      },
+      {
+        "nombre": "Placa madre compatible",
+        "especificacion": "Socket LGA 1200",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/hvM3qWGK/descarga-36.jpg"
+      },
+      {
+        "nombre": "Memoria RAM de alta velocidad",
+        "especificacion": "32GB DDR4",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/pd8GLndG/descarga-37.jpg"
+      },
+      {
+        "nombre": "Tarjeta gráfica de gama alta",
+        "especificacion": "GeForce RTX 3080",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/PqkbKVty/descarga-38.jpg"
+      },
+      {
+        "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+        "especificacion": "SSD ultrarrápido",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Placa madre ASUS ROG Strix Z590-E",
+    "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg",
+    "descripcion": "Una placa madre de alta gama con características avanzadas de overclocking.",
+    "precio": 279.99,
+    "detallesGenerales": "Tipo de placa madre: ATX | Socket: LGA 1200 | Chipset: Intel Z590 | Ranuras PCIe: 3 x PCIe 4.0 x16",
+    "detallesEspecificos": "Conectividad: Wi-Fi 6, Bluetooth 5.2 | Audio: ROG SupremeFX | RGB: Aura Sync",
+    "productosRelacionados": [
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Rendimiento excepcional",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/DZnT26Bw/cpili911900k.jpg"
+      },
+      {
+        "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+        "especificacion": "Alta velocidad",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/pd8GLndG/descarga-37.jpg"
+      },
+      {
+        "nombre": "Tarjeta gráfica GeForce RTX 3080",
+        "especificacion": "Potente GPU",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg"
+      },
+      {
+        "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+        "especificacion": "SSD ultrarrápido",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg"
+      },
+      {
+        "nombre": "Fuente de alimentación de alta potencia",
+        "especificacion": "750W Gold",
+        "precio": 89.99,
+        "imagen": "https://i.postimg.cc/wM5F954g/220-G5-0750-X1-XL-1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+    "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg",
+    "descripcion": "Memoria RAM de alto rendimiento para una experiencia informática fluida.",
+    "precio": 149.99,
+    "detallesGenerales": "Capacidad: 32GB (2 x 16GB) | Tipo: DDR4 | Velocidad: 3200 MHz | Latencia: CL16",
+    "detallesEspecificos": "Diseño de perfil bajo: Sí | Disipador de calor: Aluminio anodizado | Compatibilidad: Intel XMP 2.0",
+    "productosRelacionados": [
+      {
+        "nombre": "Placa madre ASUS ROG Strix Z590-E",
+        "especificacion": "Características avanzadas",
+        "precio": 279.99,
+        "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg"
+      },
+      {
+        "nombre": "Tarjeta gráfica GeForce RTX 3080",
+        "especificacion": "Rendimiento de juego",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg"
+      },
+      {
+        "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+        "especificacion": "SSD ultrarrápido",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg"
+      },
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Alto rendimiento",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/j5BSQmTd/descarga-34.jpg"
+      },
+      {
+        "nombre": "Fuente de alimentación de alta potencia",
+        "especificacion": "750W Gold",
+        "precio": 89.99,
+        "imagen": "https://i.postimg.cc/wM5F954g/220-G5-0750-X1-XL-1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+    "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg",
+    "descripcion": "Unidad SSD ultrarrápida para una mayor velocidad de carga y transferencia de datos.",
+    "precio": 129.99,
+    "detallesGenerales": "Capacidad: 1TB | Interfaz: NVMe PCIe | Velocidad de lectura: 3500 MB/s | Velocidad de escritura: 2500 MB/s",
+    "detallesEspecificos": "Factor de forma: M.2 2280 | Resistencia: 600 TBW | Caché: 1GB LPDDR4 | Software de gestión: Samsung Magician",
+    "productosRelacionados": [
+      {
+        "nombre": "Tarjeta gráfica GeForce RTX 3080",
+        "especificacion": "Rendimiento de juego",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg"
+      },
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Alto rendimiento",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/j5BSQmTd/descarga-34.jpg"
+      },
+      {
+        "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+        "especificacion": "Rendimiento confiable",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg"
+      },
+      {
+        "nombre": "Placa madre ASUS ROG Strix Z590-E",
+        "especificacion": "Características avanzadas",
+        "precio": 279.99,
+        "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg"
+      },
+      {
+        "nombre": "Fuente de alimentación de alta potencia",
+        "especificacion": "750W Gold",
+        "precio": 89.99,
+        "imagen": "https://i.postimg.cc/wM5F954g/220-G5-0750-X1-XL-1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Monitor 4K",
+    "imagen": "https://i.postimg.cc/4Nk29ypr/Philips-279-C9.jpg",
+    "descripcion": "Un monitor de resolución ultra HD para una experiencia visual impresionante.",
+    "precio": 499.99,
+    "detallesGenerales": "Tipo de monitor: 4K | Tamaño de pantalla: 28 pulgadas | Resolución: 3840x2160",
+    "detallesEspecificos": "Tasa de refresco: 60Hz | Tiempo de respuesta: 5ms | Tecnología de panel: IPS | Conectividad: HDMI, DisplayPort",
+    "productosRelacionados": [
+      {
+        "nombre": "Tarjeta gráfica GeForce RTX 3080",
+        "especificacion": "Rendimiento de juego",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg"
+      },
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Alto rendimiento",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/j5BSQmTd/descarga-34.jpg"
+      },
+      {
+        "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+        "especificacion": "Rendimiento confiable",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg"
+      },
+      {
+        "nombre": "Placa madre ASUS ROG Strix Z590-E",
+        "especificacion": "Características avanzadas",
+        "precio": 279.99,
+        "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg7"
+      },
+      {
+        "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+        "especificacion": "SSD ultrarrápido",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Fuente de alimentación de alta potencia",
+    "imagen": "https://i.postimg.cc/wM5F954g/220-G5-0750-X1-XL-1.jpg",
+    "descripcion": "Una fuente de alimentación de 750W Gold para sistemas de alta potencia.",
+    "precio": 89.99,
+    "detallesGenerales": "Potencia: 750W | Certificación: 80 PLUS Gold | Modular: Totalmente modular",
+    "detallesEspecificos": "Ventilador: 140mm con control de velocidad | Protecciones: OVP, UVP, OCP, OTP, SCP",
+    "productosRelacionados": [
+      {
+        "nombre": "Tarjeta gráfica GeForce RTX 3080",
+        "especificacion": "Rendimiento de juego",
+        "precio": 699.99,
+        "imagen": "https://i.postimg.cc/8kBXLDwc/27375-2.jpg"
+      },
+      {
+        "nombre": "Procesador Intel Core i9-11900K",
+        "especificacion": "Alto rendimiento",
+        "precio": 549.99,
+        "imagen": "https://i.postimg.cc/j5BSQmTd/descarga-34.jpg"
+      },
+      {
+        "nombre": "Memoria RAM Corsair Vengeance LPX 32GB",
+        "especificacion": "Rendimiento confiable",
+        "precio": 149.99,
+        "imagen": "https://i.postimg.cc/nzP0dcjf/memoria-32gb-2x16gb-ddr4-corsair-vengeance-lpx-black-bus-3600mhz-optimizado-amd-ryzen-intel-xmp-pncm.jpg"
+      },
+      {
+        "nombre": "Placa madre ASUS ROG Strix Z590-E",
+        "especificacion": "Características avanzadas",
+        "precio": 279.99,
+        "imagen": "https://i.postimg.cc/KY5W52Dm/cf060a09-d0c9-4f1c-a7f7-a645d2ff0d25-1200x.jpg"
+      },
+      {
+        "nombre": "Unidad de almacenamiento SSD Samsung 970 EVO",
+        "especificacion": "SSD ultrarrápido",
+        "precio": 129.99,
+        "imagen": "https://i.postimg.cc/8Ck29c57/disco-solido-m2-samsung-970-evo-plus-1tb-mz-v7s1t0bam-80mm.jpg"
+      }
+    ]
+  }
+]
+
+
