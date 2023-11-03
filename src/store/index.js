@@ -41,10 +41,15 @@ export default createStore({
       }
     },
     agregarAlCarrito({ commit, state }, product) {
-      state.carrito.hasOwnProperty(product.id)
-        ? (product.cantidad = state.carrito[product.id].cantidad + 1)
-        : (product.cantidad = 1);
-      commit('setCarrito', product);
+      // Verificar si el producto ya está en el carrito
+      if (state.carrito.hasOwnProperty(product.id)) {
+        // Aumentar la cantidad del producto en el carrito
+        state.carrito[product.id].cantidad++;
+      } else {
+        // Agregar el producto al carrito con una cantidad de 1
+        const productInCart = { ...product, cantidad: 1 };
+        commit('setCarrito', productInCart);
+      }
     },
   },
   getters: {
@@ -52,7 +57,7 @@ export default createStore({
       return Object.values(state.carrito).reduce((acc, { cantidad }) => acc + cantidad, 0);
     },
     totalPrecio(state) {
-      return Object.values(state.carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0);
+      return Object.values(state.carrito).reduce((acc, { cantidad, price }) => acc + cantidad * price, 0);
     },
   },
 });

@@ -31,6 +31,7 @@ const routes = [
       path: '/car',
       name: 'car',
       component: car, // Esta debe ser la componente que muestra todos los productos
+      props: true
     },
     {
       path: '/plan',

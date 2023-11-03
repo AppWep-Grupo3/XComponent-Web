@@ -116,6 +116,8 @@ export default {
     const store = useStore();
   
     const agregarProducto = (product) => {
+      console.log("El productoooooooooooooooooooo")
+      console.log(product)
       store.dispatch('agregarAlCarrito', product);
 
       // Mostrar el mensaje de confirmación
@@ -131,12 +133,15 @@ export default {
       console.log('producto agregado');
       console.log(mostrarDeshacer)
 
+      
+
       //Agregar al carrito en la bd
       if(localStorage.getItem('idSubproductSelect')===null){
         console.log('no hay subproducto seleccionado');
+
       }
       
-      console.log('Subproducto seleccionado');
+    console.log('Subproducto seleccionado');
     const idUser = JSON.parse(localStorage.getItem('user-info'));
     console.log('El id del usuario es: ' + idUser.id);
 
@@ -144,11 +149,17 @@ export default {
       userId: idUser.id,
       productId: product.id,
       subproductId: localStorage.getItem('idSubproductSelect'),
-      cantidad: 1,
-      unitPriceDesct: product.price
+      quantity: 1,
+      totalPrice: product.price
     };
 
-    axios.post("http://localhost:5172/api/v1/cart", data)
+    console.log('El objeto a enviar es: ' + JSON.stringify(data));
+
+    axios.post("http://localhost:5172/api/v1/cart", data, {
+        headers: {
+           'Content-Type': 'application/json'
+  }
+  })
       .then(response => {
         console.log('Solicitud POST exitosa:', response);
         // Puedes realizar alguna acción adicional aquí si es necesario.
@@ -158,7 +169,6 @@ export default {
         // Puedes manejar el error de acuerdo a tus necesidades.
       });
 
-      console.log('El id del subproducto es: '+localStorage.getItem('idSubproductSelect'));
 
        
 
