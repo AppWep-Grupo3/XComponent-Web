@@ -4,21 +4,21 @@
       <!-- Contenido de cada tarjeta de producto -->
       <template #header>
         
-        <img :src="producto.imagen" alt=""><!-- Contenido del encabezado -->
+        <img :src="producto.image" alt=""><!-- Contenido del encabezado -->
       </template>
       <template #title>
-        {{ producto.nombre }} <!-- Mostrar el nombre del producto -->
+        {{ producto.name }} <!-- Mostrar el nombre del producto -->
       </template>
       <template #content>
         <!-- Mostrar otros detalles del producto -->
         
-        <p class="descr-general">{{ producto.descripcion }}</p>
-        <p class="precio-general">Precio: ${{ producto.precio }}</p>
+        <p class="descr-general">{{ producto.description }}</p>
+        <p class="precio-general">Precio: ${{ producto.price }}</p>
       </template>
       <template #footer>
         <!-- Contenido del pie de la tarjeta -->
         <router-link :to="{ name: 'ProducDetail', params: { id: producto.id} }">
-          <button class="btn btn-primary">Detalle</button>
+          <button  @click=" verDetalle(producto.id)"  class="btn btn-primary">Detalle</button>
         </router-link>
       </template>
     </pv-card>
@@ -26,11 +26,39 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "producto-card",
   props: {
     productos: Array,
   },
+
+  methods: {
+  async verDetalle(idProducto) {
+    console.log('Haciendo clic en "verDetalle" del producto con ID:', idProducto);
+    
+    console.log('El id del subproducto es: '+localStorage.getItem('idSubproductSelect'));
+
+    // Llamar al producto seleccionado desde la API
+    let productSelect= await axios.get('http://localhost:5172/api/v1/product/' + idProducto)
+      .then(response => {
+        const detailsProductSelect = response.data;
+        console.log('Detalles del producto seleccionado:', detailsProductSelect)
+        // Guardar el producto en el local storage 
+        localStorage.setItem('productSelect', JSON.stringify(detailsProductSelect));
+      })
+      .catch(error => {
+        console.log('Error al cargar el producto seleccionado', error);
+      });
+      console.log('Detalles del producto seleccionado:', productSelect.data);
+      
+  }
+}
+
+
+
+
+
 };
 </script>
 <style scoped>

@@ -5,9 +5,9 @@
 
         <div class="product-intern">
         <!-- Producto general izquierda -->
-         <h1>{{ product.nombre }}</h1>
-         <img :src="product.imagen" alt="" style="max-width: 500px; height: auto;">
-         <p>{{ product.detallesGenerales }}</p>
+         <h1>{{ product.name }}</h1>
+         <img :src="product.image" alt="" style="max-width: 500px; height: auto;">
+         <p>{{ product.generalDetails }}</p>
        </div>
 
 
@@ -17,7 +17,7 @@
         <div style="display: flex; margin-top: 40px; margin-bottom: 40px;">
 
           <div class="content-detailEsp" >
-                <div v-for="(detail, index) in product.detallesEspecificos.split('|')" :key="index">
+                <div v-for="(detail, index) in product.specificDetails.split('|')" :key="index">
                   <p style="text-align: left; margin-left: 10px; ">{{ detail }}</p>
                 </div>
            </div>
@@ -27,7 +27,7 @@
                <h4>Precio*</h4>
                <div>
                  <s v-if="precioAnterior !== null">S./ {{ precioAnterior }}</s>
-                 <h1>S./ {{ product.precio }}</h1>
+                 <h1>S./ {{ product.price }}</h1>
                </div>
                <button @click="agregarProducto(product)">Agregar al carrito</button>
              </div>
@@ -52,12 +52,13 @@
           
             <div class="productIntercam" style=" display: flex;">
 
-              <div v-for="(relatedProduct, index) in product.productosRelacionados" :key="index" class="product-intern">
-                <div><img :src="relatedProduct.imagen" alt="" class="related-product"></div>
-                <div class="part-1"><small >{{ relatedProduct.nombre }}</small></div>
-                <div class="part-2"><p>  {{ relatedProduct.precio }}</p></div>
+              <div v-for="(relatedProduct, index) in product.subProductsList" :key="index" class="product-intern">
+                <div><img :src="relatedProduct.image" alt="" class="related-product"></div>
+                <div class="part-1"><small >{{ relatedProduct.name }}</small></div>
+                <div class="part-2"><p>  {{ relatedProduct.price }}</p></div>
                 
-                <button  @click="restarPrecio(product, relatedProduct.precio, index)" >{{ mostrarDeshacer[index] ? 'Deshacer' : 'Lo tengo!' }}</button>
+                <button  @click="restarPrecio(product, relatedProduct.price, index,relatedProduct.id)" >{{ mostrarDeshacer[index] ? 'Deshacer' : 'Lo tengo!' }}</button>
+              
               </div>
 
             </div>
@@ -75,7 +76,7 @@
 
         
         <router-link :to="{ name: 'home' }">
-          <button class="button-return">Volver</button>
+          <button @click="emptyProductSelect()" class="button-return">Volver</button>
         </router-link>
         
       </div>
@@ -89,14 +90,24 @@
 <script>
 import { mapState, useStore } from 'vuex';
 import { ref } from 'vue'; // Importa ref
+import axios from 'axios';
 ///////
 
-///////
+//////
 
 export default {
-  props: ['id','product'],
+  props: ['id'],
+  methods: {
+    emptyProductSelect() {
+      // Vacía el producto seleccionado del localStorage
+      console.log("Vaciando producto seleccionado");
+      localStorage.removeItem('productSelect');
+   //   this.$router.push( '/home' );
+    },
+  },
  
-  setup() {
+   setup() {
+   
     const confirmation = ref({ show: false });
     const precioAnterior=ref(null);
     const mostrarDeshacer = ref(Array(5).fill(false));
@@ -119,20 +130,55 @@ export default {
       console.log(product);
       console.log('producto agregado');
       console.log(mostrarDeshacer)
+
+      //Agregar al carrito en la bd
+      if(localStorage.getItem('idSubproductSelect')===null){
+        console.log('no hay subproducto seleccionado');
+      }
+      
+      console.log('Subproducto seleccionado');
+    const idUser = JSON.parse(localStorage.getItem('user-info'));
+    console.log('El id del usuario es: ' + idUser.id);
+
+    const data = {
+      userId: idUser.id,
+      productId: product.id,
+      subproductId: localStorage.getItem('idSubproductSelect'),
+      cantidad: 1,
+      unitPriceDesct: product.price
     };
 
-    const restarPrecio=(product,precioProductoRelacionado,index)=>{
+    axios.post("http://localhost:5172/api/v1/cart", data)
+      .then(response => {
+        console.log('Solicitud POST exitosa:', response);
+        // Puedes realizar alguna acción adicional aquí si es necesario.
+      })
+      .catch(error => {
+        console.error('Error al realizar la solicitud POST:', error);
+        // Puedes manejar el error de acuerdo a tus necesidades.
+      });
+
+      console.log('El id del subproducto es: '+localStorage.getItem('idSubproductSelect'));
+
+       
+
+    };
+
+    const restarPrecio=(product,precioProductoRelacionado,index,subProductId)=>{
       if(mostrarDeshacer.value[index]===false){
-        precioAnterior.value=product.precio;
-        product.precio = product.precio - precioProductoRelacionado;
+        console.log('restar precio:',subProductId);
+        precioAnterior.value=product.price;
+        product.price = product.price - precioProductoRelacionado;
         mostrarDeshacer.value[index]=true;
+        localStorage.setItem('idSubproductSelect', JSON.stringify(subProductId))
 
       }else{
-        product.precio = precioAnterior.value;
+        product.price = precioAnterior.value;
         precioAnterior.value=null;
         mostrarDeshacer.value[index]=false;
+        localStorage.removeItem('idSubproductSelect');
       }
- //para manejar varios precios, crea un arreglo de precios anteriores
+    //para manejar varios precios, crea un arreglo de precios anteriores
     }
     
     return { confirmation ,agregarProducto ,restarPrecio,precioAnterior,mostrarDeshacer};
@@ -143,6 +189,8 @@ export default {
   computed: {
     ...mapState(['productos']),
     product() {
+      
+      console.log(this.id);
       const productos = this.productos;
       console.log(productos);
       if (!productos || !this.id) {
