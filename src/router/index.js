@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //aca va la ruta del dtail view
 import ProducDetail from '../views/produc-detail.vue'
-import ProductoCard from '../components/producto-card.component.vue'
+import productoCard from '../components/producto-card.component.vue'
 import HomeView from '../views/home-view.vue'
 import car from '../components/car.component.vue'
 import plan from '../components/plan.vue' 
@@ -53,7 +53,7 @@ const routes = [
       name: 'accountEdit',
       component: accountEdit,
     }
-  
+
 ]
   
 
