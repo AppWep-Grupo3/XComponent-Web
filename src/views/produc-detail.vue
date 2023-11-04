@@ -63,6 +63,11 @@
 
             </div>
 
+           <router-link to="/images">
+             <button>Subir foto</button>
+           </router-link>
+
+
             <div  style="text-align: center;">
               <h7 >Hey! Recuerda que por ser cliente basico, podras dar como parte <br>de pago un producto usados de tu propiedad</h7>
             </div>
