@@ -50,7 +50,7 @@ export default {
 
     async login(){
       let result = await axios.get(
-        'http://localhost:3000/users?email='+this.correo+'&password='+this.contrasena
+        'http://localhost:5172/api/v1/user/find?email='+this.correo+'&password='+this.contrasena
       )
 
       if(result.status==200 && result.data.length>0){

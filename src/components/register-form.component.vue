@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="premium-container">
-      <span class="text">PLAN ESTÁNDAR</span>
+      <span class="text"><a href="/plan">PLAN ESTANDAR</a></span>
     </div>
 
     <form class="form-container" @submit.prevent="validarFormulario">
@@ -40,11 +40,11 @@
       <div class="acceptance">
         <label>
           <input type="checkbox" v-model="aceptaTerminos" />
-          <span class="acceptance-text"><a href="#" class="acceptance-link">Acepto los TÉRMINOS Y CONDICIONES</a></span>
+          <span class="acceptance-text">Acepto los TÉRMINOS Y CONDICIONES</span>
         </label>
         <label>
           <input type="checkbox" v-model="aceptaPoliticas" />
-          <span class="acceptance-text"><a href="#" class="acceptance-link">Acepto las POLÍTICAS DE PRIVACIDAD</a></span>
+          <span class="acceptance-text">Acepto las POLÍTICAS DE PRIVACIDAD</span>
         </label>
         <span class="error" v-if="errores.aceptaTerminos">{{ errores.aceptaTerminos }}</span>
         <span class="error" v-if="errores.aceptaPoliticas">{{ errores.aceptaPoliticas }}</span>
@@ -54,7 +54,7 @@
     </form>
 
     <div class="premium-container">
-      <span class="text">PLAN PREMIUM</span>
+      <span class="text"><a href="/plan">PLAN PREMIUM</a></span>
     </div>
   </div>
 </template>
@@ -109,11 +109,16 @@ export default {
     },
 
     async registrarse(){
-        let result= await axios.post("http://localhost:3000/users", {
-          nombre: this.nombres,
-          apellido: this.apellidos,
-          email: this.email,
-          password: this.password,
+      let result= await axios.post("http://localhost:5172/api/v1/user", {
+          FirstName: this.nombres,
+          LastName: this.apellidos,
+          Email: this.email,
+          Password: this.password,
+        },
+         {
+        headers: {
+          'Content-Type': 'application/json',
+        }
         });
 
         console.warn("resultado", result);
@@ -140,7 +145,7 @@ export default {
   
   .premium-container {
     background-color: black;
-    height: 80%;
+    height: 60%;
     color: #fff;
     padding: 20px;
     text-align: center;
