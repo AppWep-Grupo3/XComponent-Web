@@ -79,7 +79,7 @@ methods: {
     }
 
     try {
-      let result = await axios.put(`http://localhost:3000/users/${this.userId}`, {
+      let result = await axios.put(`https://xcomponentapirest.onrender.com/api/v1/users/${this.userId}`, {
         nombre: this.nombre,
         apellido: this.apellido,
         email: this.userInfo.email,

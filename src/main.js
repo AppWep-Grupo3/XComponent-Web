@@ -24,6 +24,10 @@ import Button from 'primevue/button';
 import router from './router'
 import InputText from 'primevue/inputtext';
 
+// main.js
+
+
+
 
 createApp(App)
     .use(PrimeVue, {ripple: true})

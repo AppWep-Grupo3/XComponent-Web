@@ -73,13 +73,13 @@ export default{
 
   const fetchProductsInCart = async () => {
     try {
-      const response = await axios.get('http://localhost:5172/api/v1/cart/getcartbyuserid/' + idUser.id);
+      const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id);
       productsInCart = response.data;
 
       if (productsInCart.length > 0) {
         const dataProducts = await Promise.all(
           productsInCart.map(element =>
-            axios.get('http://localhost:5172/api/v1/product/' + element.productId)
+            axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + element.productId)
           )
         );
 

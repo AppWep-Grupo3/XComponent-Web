@@ -37,6 +37,7 @@
 
 <script>
 import axios from 'axios';
+import { mapActions } from 'vuex'; // Importa mapActions desde Vuex
 
 export default {
   name: 'iniciarSesion',
@@ -47,15 +48,24 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['setUser']), // Importa la acción setUser desde Vuex
 
     async login(){
       let result = await axios.get(
-        'http://localhost:5172/api/v1/user/find?email='+this.correo+'&password='+this.contrasena
+        'https://xcomponentapirest.onrender.com/api/v1/user/find?email='+this.correo+'&password='+this.contrasena
       )
 
       if(result.status==200 && result.data.length>0){
           alert("Usuario inicio sesión correctamente");
           localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+          
+          
+
+// Actualiza el estado en Vuex
+          this.$store.dispatch('setUser', result.data[0]);
+
+// Redirige al usuario a otra página
+
           this.$router.push('/home');
         }
         else {

@@ -35,7 +35,7 @@ export default {
 
     const fetchProductsInCart = async () => {
       try {
-        const response = await axios.get('http://localhost:5172/api/v1/cart/getcartbyuserid/' + idUser.id);
+        const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id);
         productsInCart.value = response.data;
         console.log('Productos en el carrito cargados al entrar al carrito:', productsInCart.value);
 
@@ -75,7 +75,7 @@ export default {
         quantity: cantidad.value,
         totalPrice: cantidad.value * props.item.price,
       };
-      axios.put('http://localhost:5172/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
+      axios.put('https://xcomponentapirest.onrender.com/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -99,7 +99,7 @@ export default {
       };
 
       if (cantidad.value >= 1) {
-        axios.put('http://localhost:5172/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
+        axios.put('https://xcomponentapirest.onrender.com/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -121,7 +121,7 @@ export default {
           productId: props.item.id,
           userId: idUser.id
         };
-        axios.delete('http://localhost:5172/api/v1/cart/DeleteProducCart/' + idUser.id, {
+        axios.delete('https://xcomponentapirest.onrender.com/api/v1/cart/DeleteProducCart/' + idUser.id, {
         data: dataDelete,
         headers: {
     'Content-Type': 'application/json'

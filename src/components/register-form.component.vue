@@ -109,7 +109,7 @@ export default {
     },
 
     async registrarse(){
-      let result= await axios.post("http://localhost:5172/api/v1/user", {
+      let result= await axios.post("https://xcomponentapirest.onrender.com/api/v1/user", {
           FirstName: this.nombres,
           LastName: this.apellidos,
           Email: this.email,

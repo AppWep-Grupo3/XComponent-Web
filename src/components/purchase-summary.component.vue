@@ -29,7 +29,7 @@ export default {
 
     const fetchProductsInCart = async () => {
       try {
-        const response = await axios.get('http://localhost:5172/api/v1/cart/getcartbyuserid/' + idUser.id);
+        const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/getcartbyuserid/' + idUser.id);
         productsInCart.value = response.data;
         console.log('Productos en el carrito cargados al entrar al carrito:', productsInCart.value);
 

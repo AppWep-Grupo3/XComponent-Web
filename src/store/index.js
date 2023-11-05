@@ -3,10 +3,14 @@ import axios from 'axios';
 
 export default createStore({
   state: {
+    user:null,
     productos: [],
     carrito: {},
   },
   mutations: {
+    setUser(state,user){
+      state.user = user;
+    },
     setProductos(state, payload) {
       state.productos = payload;
       console.log(state.productos);
@@ -31,7 +35,7 @@ export default createStore({
     async fetchData({ commit }) {
       try {
         // Realiza una solicitud GET a la API utilizando Axios
-        const response = await axios.get('http://localhost:5172/api/v1/product'); // Reemplaza con la URL de tu API
+        const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/product'); // Reemplaza con la URL de tu API
         console.log(response)
         const data = response.data;
         commit('setProductos', data);
@@ -51,6 +55,9 @@ export default createStore({
         commit('setCarrito', productInCart);
       }
     },
+    setUser(context, user) {
+      context.commit('setUser', user);
+    },
   },
   getters: {
     totalCantidad(state) {
@@ -59,5 +66,9 @@ export default createStore({
     totalPrecio(state) {
       return Object.values(state.carrito).reduce((acc, { cantidad, price }) => acc + cantidad * price, 0);
     },
+
+    isAuthenticated(state) {
+      return state.user !== null;
+    }
   },
 });

@@ -160,7 +160,7 @@ export default {
 
     console.log('El objeto a enviar es: ' + JSON.stringify(data));
 
-    axios.post("http://localhost:5172/api/v1/cart", data, {
+    axios.post("https://xcomponentapirest.onrender.com/api/v1/cart", data, {
         headers: {
            'Content-Type': 'application/json'
   }

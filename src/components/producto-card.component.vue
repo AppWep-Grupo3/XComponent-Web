@@ -1,4 +1,5 @@
 <template>
+  
   <div class="product-grid">
     <pv-card class="product-card" v-for="producto in productos" :key="producto.id" style="width: 20em;">
       <!-- Contenido de cada tarjeta de producto -->
@@ -17,30 +18,39 @@
       </template>
       <template #footer>
         <!-- Contenido del pie de la tarjeta -->
-        <router-link :to="{ name: 'ProducDetail', params: { id: producto.id} }">
+       
           <button  @click=" verDetalle(producto.id)"  class="btn btn-primary">Detalle</button>
-        </router-link>
+       
       </template>
     </pv-card>
   </div>
+
 </template>
 
 <script>
 import axios from 'axios';
+//import router from '../router/index.js';
+
 export default {
+
   name: "producto-card",
   props: {
     productos: Array,
   },
+  //components: { router },
 
   methods: {
   async verDetalle(idProducto) {
+    const infoUSer= JSON.parse(localStorage.getItem('user-info'));
+    if(infoUSer){
+      console.log('El usuario esta logueado');
+
     console.log('Haciendo clic en "verDetalle" del producto con ID:', idProducto);
     
     console.log('El id del subproducto es: '+localStorage.getItem('idSubproductSelect'));
 
     // Llamar al producto seleccionado desde la API
-    let productSelect= await axios.get('http://localhost:5172/api/v1/product/' + idProducto)
+    let productSelect= await axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + idProducto)
       .then(response => {
         const detailsProductSelect = response.data;
         console.log('Detalles del producto seleccionado:', detailsProductSelect)
@@ -50,16 +60,25 @@ export default {
       .catch(error => {
         console.log('Error al cargar el producto seleccionado', error);
       });
+      console.log('/producto/',idProducto)
+      this.$router.push('/producto/'+idProducto);
       console.log('Detalles del producto seleccionado:', productSelect.data);
       
   }
+  else{
+    console.log('El usuario no esta logueado');
+    alert('Debe iniciar sesion para ver los detalles del producto');
+    this.$router.push('/iniciarSesion');
+  }
+  },
+}
 }
 
 
 
 
 
-};
+
 </script>
 <style scoped>
 .product-grid {

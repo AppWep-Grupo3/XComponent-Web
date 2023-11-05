@@ -34,18 +34,26 @@
 
               </ul>
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <router-link to="register" class="nav-link" @click="closeMobileMenu">
-                    <i class="pi pi-user"></i>
-                    Registrarse
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
-                    <i class="pi pi-user"></i>
-                    Iniciar Sesión
-                  </router-link>
-                </li>
+               <!-- Si user-data no existe o está vacío, muestra "Iniciar Sesión" y "Registrarse" -->
+                  <li class="nav-item" v-if="!localStorageUserData">
+                    <router-link to="register" class="nav-link" @click="closeMobileMenu">
+                      <i class="pi pi-user"></i>
+                      Registrarse
+                    </router-link>
+                  </li>
+                  <li class="nav-item" v-if="!localStorageUserData">
+                    <router-link to="iniciarSesion" class="nav-link" @click="closeMobileMenu">
+                      <i class="pi pi-user"></i>
+                      Iniciar Sesión
+                    </router-link>
+                  </li>
+
+                  <!-- Si user-data existe y no está vacío, muestra el nombre de usuario -->
+                  <li class="nav-item" v-if="localStorageUserData">
+                <span class="nav-link user-name large-bold"> <!-- Agrega las clases "user-name" y "large-bold" -->
+                  Bienvenid@    {{ localStorageUserData}}.
+                 </span>
+                    </li>
 
                 <li class="nav-item" style="margin-right: 20px;">
                   <router-link to="/car">
@@ -60,10 +68,12 @@
 
 <script>
 import router from '../../router';
+import { mapActions } from 'vuex'; // Importa mapActions desde Vuex
 
 export default {
   name: "header-section",
   data() {
+    
     return {
       menuItems: [
         { label: "Inicio", route: "/", icon: "pi pi-home" },
@@ -74,7 +84,27 @@ export default {
     };
   },
   components: { router },
+
+
+  beforeCreate() {//Esto se ejecuta antes de que se cree el componente
+    // Carga la información del usuario desde el LocalStorage
+    this.$store.dispatch('setUser', JSON.parse(localStorage.getItem('user-info')));
+  },
+
+
+  computed: {
+    localStorageUserData() {
+    // Obtén y parsea la variable "user-data" del almacenamiento local
+    const userData = JSON.parse(localStorage.getItem('user-info'));
+    const nameComplete = userData ? userData.firstName + " " + userData.lastName[0] : null;
+   // console.log($store.state.user.firstName);
+    
+   /// return nameComplete;
+    return this.$store.state.user.firstName+" "+this.$store.state.user.lastName[0];
+  }
+  },
   methods: {
+    ...mapActions(['setUser']), // Importa la acción setUser desde Vuex
     toggleMobileMenu() {
       this.mobileMenuOpen = !this.mobileMenuOpen;
     },
@@ -107,6 +137,14 @@ export default {
 .nav-link i {
   margin-right: 5px;
 }
+.user-name {
+  font-size: 18px; /* Ajusta el tamaño de fuente a tu preferencia */
+}
+
+.large-bold {
+  font-weight: bold; /* Hace que el texto sea en negrita */
+}
+
 
 .custom-button{
   background-color: #FFC700; /* Cambiar a amarillo */
