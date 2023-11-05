@@ -97,11 +97,14 @@ export default {
     localStorageUserData() {
     // Obtén y parsea la variable "user-data" del almacenamiento local
     const userData = JSON.parse(localStorage.getItem('user-info'));
-    const nameComplete = userData ? userData.firstName + " " + userData.lastName[0] : null;
-   // console.log($store.state.user.firstName);
-    
-   /// return nameComplete;
-    return this.$store.state.user.firstName+" "+this.$store.state.user.lastName[0] || null;
+    if (userData && userData.firstName && userData.lastName) {
+      const name = userData.firstName + " " + userData.lastName[0];
+      return name;
+    } else {
+      return null;
+    }
+
+   // return name ? name : null ;
   }
   },
   methods: {
