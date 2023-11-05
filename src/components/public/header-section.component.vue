@@ -87,6 +87,7 @@ export default {
 
 
   beforeCreate() {//Esto se ejecuta antes de que se cree el componente
+    //
     // Carga la información del usuario desde el LocalStorage
     this.$store.dispatch('setUser', JSON.parse(localStorage.getItem('user-info')));
   },
@@ -100,7 +101,7 @@ export default {
    // console.log($store.state.user.firstName);
     
    /// return nameComplete;
-    return this.$store.state.user.firstName+" "+this.$store.state.user.lastName[0];
+    return this.$store.state.user.firstName+" "+this.$store.state.user.lastName[0] || null;
   }
   },
   methods: {
