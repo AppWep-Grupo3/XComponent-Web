@@ -50,7 +50,11 @@ export default {
     console.log('El id del subproducto es: '+localStorage.getItem('idSubproductSelect'));
 
     // Llamar al producto seleccionado desde la API
-    let productSelect= await axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + idProducto)
+    let productSelect= await axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + idProducto,{
+      headers: {
+      'Authorization': `Bearer ${localStorage.getItem("token")}`
+    }
+    })
       .then(response => {
         const detailsProductSelect = response.data;
         console.log('Detalles del producto seleccionado:', detailsProductSelect)

@@ -35,7 +35,11 @@ export default {
 
     const fetchProductsInCart = async () => {
       try {
-        const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id);
+        const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id,{
+          headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+        });
         productsInCart.value = response.data;
         console.log('Productos en el carrito cargados al entrar al carrito:', productsInCart.value);
 
@@ -77,7 +81,8 @@ export default {
       };
       axios.put('https://xcomponentapirest.onrender.com/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
       })
       .then(response => {
@@ -101,7 +106,8 @@ export default {
       if (cantidad.value >= 1) {
         axios.put('https://xcomponentapirest.onrender.com/api/v1/cart/updatequantityandprice/' + idUser.id, data, {
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
           }
         })
         .then(response => {
@@ -124,7 +130,8 @@ export default {
         axios.delete('https://xcomponentapirest.onrender.com/api/v1/cart/DeleteProducCart/' + idUser.id, {
         data: dataDelete,
         headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${localStorage.getItem("token")}`
   }
 })
         .then(response => {
