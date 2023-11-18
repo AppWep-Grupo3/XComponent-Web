@@ -73,17 +73,21 @@ data() {
 
 methods: {
   async guardarCambios() {
-    if (this.password !== this.userInfo.password) {
-      this.showErrorMessage = true;
-      return;
-    }
+    //if (this.password !== this.userInfo.password) {
+   //   this.showErrorMessage = true;
+   //   return;
+   // }
 
     try {
       let result = await axios.put(`https://xcomponentapirest.onrender.com/api/v1/users/${this.userId}`, {
-        nombre: this.nombre,
-        apellido: this.apellido,
+        firstName: this.nombre,
+        lastName: this.apellido,
         email: this.userInfo.email,
         password: this.newPassword,
+      },{
+        headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
       });
 
       if (result.status === 200) {

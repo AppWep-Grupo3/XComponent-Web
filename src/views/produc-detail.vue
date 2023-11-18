@@ -161,10 +161,11 @@ export default {
     console.log('El objeto a enviar es: ' + JSON.stringify(data));
 
     axios.post("https://xcomponentapirest.onrender.com/api/v1/cart", data, {
-        headers: {
-           'Content-Type': 'application/json'
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${localStorage.getItem("token")}`
   }
-  })
+})
       .then(response => {
         console.log('Solicitud POST exitosa:', response);
         // Puedes realizar alguna acción adicional aquí si es necesario.

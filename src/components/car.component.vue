@@ -73,13 +73,22 @@ export default{
 
   const fetchProductsInCart = async () => {
     try {
-      const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id);
+      const response = await axios.get('https://xcomponentapirest.onrender.com/api/v1/cart/getcartbyuserid/' + idUser.id,{
+        headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+      
+      });
       productsInCart = response.data;
 
       if (productsInCart.length > 0) {
         const dataProducts = await Promise.all(
           productsInCart.map(element =>
-            axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + element.productId)
+            axios.get('https://xcomponentapirest.onrender.com/api/v1/product/' + element.productId,{
+              headers: {
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+          }
+            })
           )
         );
 

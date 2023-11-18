@@ -51,14 +51,20 @@ export default {
     ...mapActions(['setUser']), // Importa la acción setUser desde Vuex
 
     async login(){
-      let result = await axios.get(
-        'https://xcomponentapirest.onrender.com/api/v1/user/find?email='+this.correo+'&password='+this.contrasena
+      let result = await axios.post(
+        'https://xcomponentapirest.onrender.com/api/v1/users/sign-in',
+        {
+          email: this.correo,
+          password: this.contrasena,
+        }
       )
+      console.log("SSSSSSSSSSSSSSS",result.data);
 
-      if(result.status==200 && result.data.length>0){
+      if(result.status==200){
           alert("Usuario inicio sesión correctamente");
-          localStorage.setItem("user-info", JSON.stringify(result.data[0]));
-          
+          localStorage.setItem("user-info", JSON.stringify(result.data));
+          localStorage.setItem("token", result.data.token);
+
           
 
 // Actualiza el estado en Vuex
