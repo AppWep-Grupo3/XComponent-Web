@@ -23,9 +23,6 @@
            
           />
          
-         
-
-        
         </tbody>
         <tfoot>
           <tr id="footer-carrito">
@@ -39,7 +36,9 @@
       </table>
       <router-link :to="{ name: 'home' }">
             <button class="btn btn-primary">Volver</button>
-        </router-link>
+      </router-link>
+      <p></p>
+      <p><router-link to="/order">Pagar</router-link></p>
     </div>
   </div>
 </template>

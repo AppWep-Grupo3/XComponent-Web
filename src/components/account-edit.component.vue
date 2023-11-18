@@ -73,11 +73,6 @@ data() {
 
 methods: {
   async guardarCambios() {
-    //if (this.password !== this.userInfo.password) {
-   //   this.showErrorMessage = true;
-   //   return;
-   // }
-
     try {
       let result = await axios.put(`https://xcomponentapirest.onrender.com/api/v1/users/${this.userId}`, {
         firstName: this.nombre,

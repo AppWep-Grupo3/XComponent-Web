@@ -8,7 +8,7 @@ import plan from '../components/plan.vue'
 import iniciarSesion from '../components/login-form.component.vue'
 import register from '../components/register-form.component.vue'
 import accountEdit from '../components/account-edit.component.vue'
-
+import order from '../components/order.component.vue'
 const routes = [
   {
     path: '/',
@@ -52,8 +52,12 @@ const routes = [
       path: '/accountEdit',
       name: 'accountEdit',
       component: accountEdit,
-    }
-
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: order,
+    },
 ]
   
 

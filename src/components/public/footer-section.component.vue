@@ -58,6 +58,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  position: fixed; /* Cambiado a posición fija */
+  bottom: 0;
+  width: 100%;
+  z-index: 999; /* Asegura que el footer esté sobre otros elementos en la página */
 }
 
 .footer-title {
@@ -82,11 +86,9 @@ ul {
 
 @media (max-width: 768px) {
   .p-col {
-    flex: 1 1 100%; /* Change flex settings to make elements stack on top of each other */
+    flex: 1 1 100%;
     margin-right: 0;
     margin-bottom: 20px;
   }
 }
 </style>
-
-     
