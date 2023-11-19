@@ -17,7 +17,7 @@
       Volver
     </router-link>
 
-    <router-link to="/home" class="p-button p-button-important custom-button">
+    <router-link to="/home" class="p-button p-button-important custom-button" @click="submitOrder">
       Realizar Pedido
     </router-link>
 
@@ -34,6 +34,7 @@
 import { useStore } from 'vuex';
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import axios from 'axios';
 
 export default {
   name: 'order',
@@ -41,6 +42,8 @@ export default {
     const store = useStore();
     const router = useRouter();
     const items = computed(() => store.state.carrito);
+
+    const user = JSON.parse(localStorage.getItem('user-info'));
 
     const totalAmount = computed(() => {
       return Array.isArray(items.value)
@@ -52,9 +55,29 @@ export default {
         : 0;
     });
 
-    function submitOrder() {
-      console.log('Pedido realizado con éxito!');
+    async function submitOrder() {
+      const order = {
+        UserId: user.id,
+        Date: new Date().toISOString(),
+        State: 'Solicitado',
+      };
+
+      try {
+        const response = await axios.post("https://xcomponentapirest.onrender.com/api/v1/order/", order, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxMyIsInVuaXF1ZV9uYW1lIjoidGVzdEBnbWFpbC5jb20iLCJuYmYiOjE3MDAzNTMxMTksImV4cCI6MTcwMDk1NzkxOSwiaWF0IjoxNzAwMzUzMTE5fQ.eYPvCCDXVh8_i9_aY2FUdHl94HHcM2ZfTt1IcfNoIeJoRjhBqUslrEuY-qUxnNxk2MCJd80uMIsMSWNAXBALBQ`,
+            'Content-Type': 'application/json',
+          },
+        });
+        console.log('Orden realizada con éxito:', response.data);
+        alert('Orden realizada con éxito');
+      } catch (error) {
+        console.error('Error al realizar la orden:', error);
+      }
     }
+
+
 
     return {
       items,
