@@ -61,7 +61,7 @@ export default {
       }
 
       // Envía los datos al servidor utilizando Axios
-      axios.post('https://xcomponentapirest.onrender.com/api/v1/product', this.descuento)
+      axios.post('http://localhost:3000/descuento', this.descuento)
           .then(() => {
             this.confirmation.show = true;
             this.descuento = {
