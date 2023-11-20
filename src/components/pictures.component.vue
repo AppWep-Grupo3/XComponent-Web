@@ -61,6 +61,11 @@ export default {
         return;
       }
 
+      setTimeout(() => {
+              this.confirmation.autoRedirect = true;
+            }, 2000);
+
+
       // Envía los datos al servidor utilizando Axios
       axios.post('http://localhost:3000/descuento', this.descuento)
           .then(() => {
