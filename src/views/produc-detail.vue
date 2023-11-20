@@ -63,7 +63,7 @@
 
             </div>
 
-           <router-link to="/images">
+           <router-link to="/pictures">
              <button>Subir foto</button>
            </router-link>
 
