@@ -67,7 +67,6 @@ export default {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIxMyIsInVuaXF1ZV9uYW1lIjoidGVzdEBnbWFpbC5jb20iLCJuYmYiOjE3MDAzNTMxMTksImV4cCI6MTcwMDk1NzkxOSwiaWF0IjoxNzAwMzUzMTE5fQ.eYPvCCDXVh8_i9_aY2FUdHl94HHcM2ZfTt1IcfNoIeJoRjhBqUslrEuY-qUxnNxk2MCJd80uMIsMSWNAXBALBQ`,
-            'Content-Type': 'application/json',
           },
         });
         console.log('Orden realizada con éxito:', response.data);

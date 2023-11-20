@@ -9,7 +9,7 @@ import iniciarSesion from '../components/login-form.component.vue'
 import register from '../components/register-form.component.vue'
 import accountEdit from '../components/account-edit.component.vue'
 import order from '../components/order.component.vue'
-import picturesComponent from '../components/pictures.component.vue'
+import pictures from '../components/pictures.component.vue'
 const routes = [
   {
     path: '/',
@@ -59,10 +59,10 @@ const routes = [
       name: 'order',
       component: order,
     },
-   {
-    path: 'picturesComponent',
-    name: 'picturesComponent',
-    component: picturesComponent,
+    {
+    path: '/pictures',
+    name: 'pictures',
+    component: pictures,
   },
 
 ]

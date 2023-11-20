@@ -35,6 +35,7 @@
 import axios from 'axios';
 
 export default {
+  name: 'pictures',
   data() {
     return {
       producto: {
@@ -88,7 +89,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 /* Estilo para el contenedor principal */
 div {
